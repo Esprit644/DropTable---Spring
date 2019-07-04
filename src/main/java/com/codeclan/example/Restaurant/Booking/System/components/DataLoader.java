@@ -19,7 +19,10 @@ public class DataLoader implements ApplicationRunner {
     public void run(ApplicationArguments args){
 
         Customer cust1 = new Customer("Bill Oddie", "01315234082", 0 );
+        customerRepository.save(cust1);
+
         Customer cust2 = new Customer("Tim Brooke-Taylor", "01315551234", 0 );
+        customerRepository.save(cust2);
 
 
     }
