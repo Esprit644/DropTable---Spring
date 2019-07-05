@@ -1,7 +1,11 @@
 package com.codeclan.example.Restaurant.Booking.System.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="customers")
@@ -9,6 +13,10 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
+    private List<Booking> bookings;
 
 
     private String name;
@@ -19,6 +27,7 @@ public class Customer {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.bookingCounter = bookingCounter;
+        this.bookings = new ArrayList<Booking>();
     }
 
     public Customer() {
@@ -54,6 +63,11 @@ public class Customer {
 
     public void setBookingCounter(int bookingCounter) {
         this.bookingCounter = bookingCounter;
+    }
+
+
+    public List<Booking> getBookings() {
+        return bookings;
     }
 }
 
