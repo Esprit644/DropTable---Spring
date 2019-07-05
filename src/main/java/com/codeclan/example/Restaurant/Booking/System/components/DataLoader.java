@@ -2,7 +2,7 @@ package com.codeclan.example.Restaurant.Booking.System.components;
 
 import com.codeclan.example.Restaurant.Booking.System.models.Booking;
 import com.codeclan.example.Restaurant.Booking.System.models.Customer;
-import com.codeclan.example.Restaurant.Booking.System.models.TableClass;
+import com.codeclan.example.Restaurant.Booking.System.models.DiningTable;
 import com.codeclan.example.Restaurant.Booking.System.repositories.BookingRepository;
 import com.codeclan.example.Restaurant.Booking.System.repositories.CustomerRepository;
 import com.codeclan.example.Restaurant.Booking.System.repositories.TableClassRepository;
@@ -34,10 +34,10 @@ public class DataLoader implements ApplicationRunner {
         Customer cust2 = new Customer("Tim Brooke-Taylor", "01315551234");
         customerRepository.save(cust2);
 
-        TableClass table1 = new TableClass("Table1", 2);
+        DiningTable table1 = new DiningTable("Table1", 2);
         tableClassRepository.save(table1);
 
-        TableClass table2 = new TableClass("Table2", 4);
+        DiningTable table2 = new DiningTable("Table2", 4);
         tableClassRepository.save(table2);
 
         Booking booking1 = new Booking("12/7/19", "17:00", 2, cust1, table1);

@@ -1,11 +1,8 @@
 package com.codeclan.example.Restaurant.Booking.System.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.annotations.GeneratorType;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "bookings")
@@ -24,14 +21,14 @@ public class Booking {
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "tableClass_id", nullable = false)
-    private TableClass tableClass;
+    private DiningTable tableClass;
 
     private String date;
     private String time;
     private int partySize;
 
 
-    public Booking(String date, String time, int partySize, Customer customer, TableClass tableClass) {
+    public Booking(String date, String time, int partySize, Customer customer, DiningTable tableClass) {
         this.date = date;
         this.time = time;
         this.partySize = partySize;
@@ -83,11 +80,11 @@ public class Booking {
         this.customer = customer;
     }
 
-    public TableClass getTableClass() {
+    public DiningTable getTableClass() {
         return tableClass;
     }
 
-    public void setTableClass(TableClass tableClass) {
+    public void setTableClass(DiningTable tableClass) {
         this.tableClass = tableClass;
     }
 }

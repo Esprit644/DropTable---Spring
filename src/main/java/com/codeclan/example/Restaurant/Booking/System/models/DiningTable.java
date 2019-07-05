@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "tables")
-public class TableClass {
+@Table(name = "dining_tables")
+public class DiningTable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,13 +19,13 @@ public class TableClass {
     private String tableName;
     private int capacity;
 
-    public TableClass(String tableName, int capacity) {
+    public DiningTable(String tableName, int capacity) {
         this.tableName = tableName;
         this.capacity = capacity;
         this.bookings = new ArrayList<Booking>();
     }
 
-    public TableClass() {
+    public DiningTable() {
     }
 
     public Long getId() {

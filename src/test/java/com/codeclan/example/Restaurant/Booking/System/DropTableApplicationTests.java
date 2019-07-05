@@ -1,12 +1,9 @@
 package com.codeclan.example.Restaurant.Booking.System;
 
 import com.codeclan.example.Restaurant.Booking.System.models.Customer;
-import com.codeclan.example.Restaurant.Booking.System.models.TableClass;
 import com.codeclan.example.Restaurant.Booking.System.repositories.BookingRepository;
 import com.codeclan.example.Restaurant.Booking.System.repositories.CustomerRepository;
 import com.codeclan.example.Restaurant.Booking.System.repositories.TableClassRepository;
-import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

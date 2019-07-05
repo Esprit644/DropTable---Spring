@@ -1,7 +1,7 @@
 //package com.codeclan.example.Restaurant.Booking.System.repositoryTest;
 //
 //import com.codeclan.example.Restaurant.Booking.System.models.Customer;
-//import com.codeclan.example.Restaurant.Booking.System.models.TableClass;
+//import com.codeclan.example.Restaurant.Booking.System.models.DiningTable;
 //import com.codeclan.example.Restaurant.Booking.System.repositories.BookingRepository;
 //import com.codeclan.example.Restaurant.Booking.System.repositories.CustomerRepository;
 //import org.junit.Test;
@@ -25,7 +25,7 @@
 //    BookingRepository bookingRepository;
 //
 //    @Autowired
-//    TableClass tableClass;
+//    DiningTable tableClass;
 //
 //    @Test
 //    public void contextLoads() {
