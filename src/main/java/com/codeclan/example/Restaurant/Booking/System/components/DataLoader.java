@@ -40,7 +40,7 @@ public class DataLoader implements ApplicationRunner {
         TableClass table2 = new TableClass("Table2", 4);
         tableClassRepository.save(table2);
 
-        Booking booking1 = new Booking("12/7/19", "17:00", 2);
+        Booking booking1 = new Booking("12/7/19", "17:00", 2, cust1);
         bookingRepository.save(booking1);
 
 
