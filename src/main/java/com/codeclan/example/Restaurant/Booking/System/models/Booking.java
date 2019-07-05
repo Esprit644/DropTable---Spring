@@ -21,17 +21,22 @@ public class Booking {
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "tableClass_id", nullable = false)
+    private TableClass tableClass;
 
     private String date;
     private String time;
     private int partySize;
 
 
-    public Booking(String date, String time, int partySize, Customer customer) {
+    public Booking(String date, String time, int partySize, Customer customer, TableClass tableClass) {
         this.date = date;
         this.time = time;
         this.partySize = partySize;
         this.customer = customer;
+        this.tableClass = tableClass;
 
     }
 
@@ -76,6 +81,14 @@ public class Booking {
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
+    }
+
+    public TableClass getTableClass() {
+        return tableClass;
+    }
+
+    public void setTableClass(TableClass tableClass) {
+        this.tableClass = tableClass;
     }
 }
 
