@@ -23,10 +23,10 @@ public class Customer {
     private String phoneNumber;
     private int bookingCounter;
 
-    public Customer(String name, String phoneNumber, int bookingCounter) {
+    public Customer(String name, String phoneNumber) {
         this.name = name;
         this.phoneNumber = phoneNumber;
-        this.bookingCounter = bookingCounter;
+        this.bookingCounter = 0;
         this.bookings = new ArrayList<Booking>();
     }
 

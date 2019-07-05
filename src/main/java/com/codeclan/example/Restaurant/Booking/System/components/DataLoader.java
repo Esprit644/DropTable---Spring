@@ -28,10 +28,10 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args){
 
-        Customer cust1 = new Customer("Bill Oddie", "01315234082", 0 );
+        Customer cust1 = new Customer("Bill Oddie", "01315234082");
         customerRepository.save(cust1);
 
-        Customer cust2 = new Customer("Tim Brooke-Taylor", "01315551234", 0 );
+        Customer cust2 = new Customer("Tim Brooke-Taylor", "01315551234");
         customerRepository.save(cust2);
 
         TableClass table1 = new TableClass("Table1", 2);
