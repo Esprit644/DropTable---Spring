@@ -1,5 +1,6 @@
 package com.codeclan.example.Restaurant.Booking.System;
 
+import com.codeclan.example.Restaurant.Booking.System.models.Booking;
 import com.codeclan.example.Restaurant.Booking.System.models.Customer;
 import com.codeclan.example.Restaurant.Booking.System.models.TableClass;
 import com.codeclan.example.Restaurant.Booking.System.repositories.BookingRepository;
@@ -48,6 +49,12 @@ public class DropTableApplicationTests {
 		List<Customer> found = customerRepository.findByNameContaining("Bil");
 		assertEquals(1, found.size());
 		assertEquals("Bill Oddie", found.get(0).getName());
+	}
+
+	@Test
+	public void canfindBookingByBooking_CustomerName(){
+		List<Booking> found = bookingRepository.findBookingByCustomerId(1L);
+		assertEquals(1, found.size());
 	}
 
 
