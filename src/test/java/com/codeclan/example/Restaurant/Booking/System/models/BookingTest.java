@@ -8,30 +8,32 @@ import static org.junit.Assert.assertTrue;
 
 public class BookingTest {
 
-    Booking booking;
-    Customer customer;
+    Booking booking1;
+    Customer customer1;
+    TableClass table1;
 
     @Before
     public void before(){
-        customer = new Customer("Mr Blobby", "07888 888 888");
-        booking = new Booking("12/7/19", "19:00", 4, customer);
+        table1 = new TableClass("table1", 6);
+        customer1 = new Customer("Mr Blobby", "07888 888 888");
+        booking1 = new Booking("12/7/19", "19:00", 4, customer1, table1);
     }
 
     @Test
     public void hasDate() {
-        assertEquals("12/7/19", booking.getDate());
+        assertEquals("12/7/19", booking1.getDate());
     }
 
     @Test
     public void hasTime() {
-        assertEquals("19:00", booking.getTime());
+        assertEquals("19:00", booking1.getTime());
     }
 
     @Test
     public void hasCustomer() {
-        assertTrue(booking.getCustomer() instanceof Customer);
+        assertTrue(booking1.getCustomer() instanceof Customer);
 
-        String customerName = booking.getCustomer().getName();
+        String customerName = booking1.getCustomer().getName();
         assertEquals("Mr Blobby", customerName);
     }
 }
