@@ -43,9 +43,9 @@ public class DropTableApplicationTests {
 
 	@Test
 	public void canFindAllCustomersByNameContaining(){
-		List<Customer> found = customerRepository.findByNameContaining("Bil");
+		List<Customer> found = customerRepository.findByNameContaining("Gra");
 		assertEquals(1, found.size());
-		assertEquals("Bill Oddie", found.get(0).getName());
+		assertEquals("Graeme Garden", found.get(0).getName());
 	}
 
 	@Test
@@ -54,13 +54,32 @@ public class DropTableApplicationTests {
 		assertEquals(1, found.size());
 	}
 
-//	@Test
-//	public void canGetAllBookingsForDate(){
-//		List<Booking> found = bookingRepository.getAllBookingsForDate("12/7/19");
-//		assertEquals(1, found.size());
-//	}
+	@Test
+	public void canGetAllBookingsByDate(){
+		List<Booking> found = bookingRepository.getBookingsByDate("12/7/19");
+		assertEquals(3, found.size());
+		assertEquals(3, found.get(2).getId(), 0 );
+	}
+
+	@Test
+	public void canFindBookingByCustomerId(){
+		List<Booking> found = bookingRepository.findBookingByCustomerId(3L);
+		assertEquals(3, found.get(0).getId(),0);
+	}
+
+	@Test
+	public void canFindBookingByCustomerName(){
+		List<Booking> found = bookingRepository.findBookingByCustomer_Name("Graeme Garden");
+		assertEquals(3, found.get(0).getId(), 0);
+
+	}
+
+	@Test
+	public void  canFindDateByCustomerName(){
+		List<Booking> found = bookingRepository.findBookingDateByCustomer_Name("Graeme Garden");
+		assertEquals("19:00", found.get(0).getTime());
+	}
 
 
-
-}
+	}
 

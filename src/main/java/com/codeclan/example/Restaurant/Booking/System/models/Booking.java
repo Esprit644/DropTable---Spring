@@ -1,25 +1,23 @@
 package com.codeclan.example.Restaurant.Booking.System.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "bookings")
 public class Booking {
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonIgnoreProperties("booking")
+    @JsonIgnore  //Properties("booking")
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
-    @JsonIgnoreProperties("booking")
+    @JsonIgnore//Properties("booking")
     @ManyToOne
     @JoinColumn(name = "diningTable_id", nullable = false)
     private DiningTable diningTable;
@@ -28,7 +26,7 @@ public class Booking {
     private String time;
     private int partySize;
 
-
+    @JsonIgnore
     public Booking(String date, String time, int partySize, Customer customer, DiningTable diningTable) {
         this.date = date;
         this.time = time;
