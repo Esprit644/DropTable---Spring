@@ -5,12 +5,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class TableClassTest {
-    TableClass table;
+public class DiningTableTest {
+    DiningTable table;
 
     @Before
     public void before() {
-        table = new TableClass("Table 1", 4);
+        table = new DiningTable("Table 1", 4);
     }
 
     @Test
