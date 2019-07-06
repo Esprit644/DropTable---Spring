@@ -15,12 +15,12 @@ public class CustomerController {
     @Autowired
     CustomerRepository customerRepository;
 
-    @GetMapping(value = "/customers/{name}")
+    @GetMapping(value = "/{name}")
     public List<Customer> findCustomersByName(@PathVariable String name){
         return customerRepository.findCustomersByName(name);
     }
 
-    @GetMapping(value = "/customers/{partialname}")
+    @GetMapping(value = "/{partialname}")
     public List<Customer> findByNameContaining(@PathVariable String partialname){
         return customerRepository.findByNameContaining(partialname);
     }

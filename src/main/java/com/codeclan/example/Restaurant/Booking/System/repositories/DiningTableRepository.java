@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @CrossOrigin
-public interface TableClassRepository extends JpaRepository<DiningTable,Long> {
+public interface DiningTableRepository extends JpaRepository<DiningTable,Long> {
 }

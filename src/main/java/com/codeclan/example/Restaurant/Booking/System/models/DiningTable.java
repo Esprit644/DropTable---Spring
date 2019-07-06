@@ -13,7 +13,7 @@ public class DiningTable {
     private Long id;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "tableClass", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "diningTable", fetch = FetchType.LAZY)
     private List<Booking> bookings;
 
     private String tableName;

@@ -4,7 +4,7 @@ import com.codeclan.example.Restaurant.Booking.System.models.Booking;
 import com.codeclan.example.Restaurant.Booking.System.models.Customer;
 import com.codeclan.example.Restaurant.Booking.System.repositories.BookingRepository;
 import com.codeclan.example.Restaurant.Booking.System.repositories.CustomerRepository;
-import com.codeclan.example.Restaurant.Booking.System.repositories.TableClassRepository;
+import com.codeclan.example.Restaurant.Booking.System.repositories.DiningTableRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +27,7 @@ public class DropTableApplicationTests {
 	BookingRepository bookingRepository;
 
 	@Autowired
-	TableClassRepository tableClassRepository;
+	DiningTableRepository diningTableRepository;
 
 
 	@Test
@@ -54,11 +54,11 @@ public class DropTableApplicationTests {
 		assertEquals(1, found.size());
 	}
 
-	@Test
-	public void canGetAllBookingsForDate(){
-		List<Booking> found = bookingRepository.getAllBookingsForDate("12/7/19");
-		assertEquals(1, found.size());
-	}
+//	@Test
+//	public void canGetAllBookingsForDate(){
+//		List<Booking> found = bookingRepository.getAllBookingsForDate("12/7/19");
+//		assertEquals(1, found.size());
+//	}
 
 
 

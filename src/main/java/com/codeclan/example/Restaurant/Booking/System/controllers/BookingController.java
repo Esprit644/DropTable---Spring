@@ -19,10 +19,10 @@ public class BookingController {
 //    public List<Booking> findBookingByCustomerId(@PathVariable Long id) {
 //        return bookingRepository.findBookingByCustomerId(id);
 //    }
-
-    @GetMapping(value = "/date/{date}")
-    public List<Booking> getAllBookingsForDate(@PathVariable String date) {
-        return bookingRepository.getAllBookingsForDate(date);
-    }
+//
+//    @GetMapping(value = "/{date}")
+//    public List<Booking> getBookingsForDate(@PathVariable String date) {
+//        return bookingRepository.getBookingsForDate(date);
+//    }
 
 }
