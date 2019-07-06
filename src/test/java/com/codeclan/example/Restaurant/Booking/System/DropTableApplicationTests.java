@@ -57,6 +57,12 @@ public class DropTableApplicationTests {
 		assertEquals(1, found.size());
 	}
 
+	@Test
+	public void canGetAllBookingsForDate(){
+		List<Booking> found = bookingRepository.getAllBookingsForDate("12/7/19");
+		assertEquals(1, found.size());
+	}
+
 
 
 }

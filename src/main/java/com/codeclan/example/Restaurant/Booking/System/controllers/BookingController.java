@@ -15,8 +15,14 @@ public class BookingController {
     @Autowired
     BookingRepository bookingRepository;
 
-    @GetMapping(value = "/bookings/{id}")
-    public List<Booking> findBookingByCustomerId(@PathVariable Long id) {
-        return bookingRepository.findBookingByCustomerId(id);
+//    @GetMapping(value = "/{id}")
+//    public List<Booking> findBookingByCustomerId(@PathVariable Long id) {
+//        return bookingRepository.findBookingByCustomerId(id);
+//    }
+
+    @GetMapping(value = "/date/{date}")
+    public List<Booking> getAllBookingsForDate(@PathVariable String date) {
+        return bookingRepository.getAllBookingsForDate(date);
     }
+
 }
