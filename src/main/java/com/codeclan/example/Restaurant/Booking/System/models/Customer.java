@@ -1,6 +1,8 @@
 package com.codeclan.example.Restaurant.Booking.System.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import javax.persistence.Table;
@@ -14,7 +16,8 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonIgnore
+    //@JsonIgnoreProperties("bookings")
+    //@JsonManagedReference
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
     private List<Booking> bookings;
 
@@ -65,7 +68,7 @@ public class Customer {
         this.bookingCounter = bookingCounter;
     }
 
-
+    @JsonIgnore
     public List<Booking> getBookings() {
         return bookings;
     }

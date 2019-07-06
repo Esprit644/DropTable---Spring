@@ -44,7 +44,7 @@ public class DropTableApplicationTests {
 	@Test
 	public void canFindAllCustomersByNameContaining(){
 		List<Customer> found = customerRepository.findByNameContaining("Gra");
-		assertEquals(1, found.size());
+		assertEquals(2, found.size());
 		assertEquals("Graeme Garden", found.get(0).getName());
 	}
 

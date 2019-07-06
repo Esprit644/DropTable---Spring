@@ -1,6 +1,8 @@
 package com.codeclan.example.Restaurant.Booking.System.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
 import javax.persistence.*;
@@ -12,12 +14,16 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonIgnore  //Properties("booking")
+    //@JsonIgnoreProperties("booking")
+    @JsonIgnore
+    //@JsonBackReference
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
-    @JsonIgnore//Properties("booking")
+    //@JsonIgnoreProperties("booking")
+    @JsonIgnore
+    //@JsonBackReference
     @ManyToOne
     @JoinColumn(name = "diningTable_id", nullable = false)
     private DiningTable diningTable;
@@ -26,7 +32,7 @@ public class Booking {
     private String time;
     private int partySize;
 
-    @JsonIgnore
+
     public Booking(String date, String time, int partySize, Customer customer, DiningTable diningTable) {
         this.date = date;
         this.time = time;
@@ -71,9 +77,11 @@ public class Booking {
         this.partySize = partySize;
     }
 
+
     public Customer getCustomer() {
         return customer;
     }
+
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
