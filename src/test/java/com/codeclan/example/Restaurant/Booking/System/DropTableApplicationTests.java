@@ -43,7 +43,7 @@ public class DropTableApplicationTests {
 
 	@Test
 	public void canFindAllCustomersByNameContaining(){
-		List<Customer> found = customerRepository.findByNameContaining("Gra");
+		List<Customer> found = customerRepository.findByNameIgnoreCaseContaining("Gra");
 		assertEquals(2, found.size());
 		assertEquals("Graeme Garden", found.get(0).getName());
 	}

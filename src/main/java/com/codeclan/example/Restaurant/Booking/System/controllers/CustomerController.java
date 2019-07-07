@@ -22,7 +22,7 @@ public class CustomerController {
 
     @GetMapping(value = "/partialname/{partialname}")
     public List<Customer> findByNameContaining(@PathVariable String partialname){
-        return customerRepository.findByNameContaining(partialname);
+        return customerRepository.findByNameIgnoreCaseContaining(partialname);
     }
 
 }
