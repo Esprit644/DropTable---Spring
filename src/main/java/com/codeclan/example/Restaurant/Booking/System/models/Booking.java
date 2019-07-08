@@ -10,22 +10,17 @@ import javax.persistence.*;
 @Entity
 @Table(name = "bookings")
 public class Booking {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //@JsonIgnoreProperties("booking")
-    @JsonIgnore
-    //@JsonBackReference
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
-    //@JsonIgnoreProperties("booking")
-    @JsonIgnore
-    //@JsonBackReference
     @ManyToOne
-    @JoinColumn(name = "diningTable_id", nullable = false)
+    @JoinColumn(nullable = false)
     private DiningTable diningTable;
 
     private String date;
@@ -87,11 +82,11 @@ public class Booking {
         this.customer = customer;
     }
 
-    public DiningTable getTableClass() {
+    public DiningTable getDiningTable() {
         return diningTable;
     }
 
-    public void setTableClass(DiningTable diningTable) {
+    public void setDiningTable(DiningTable diningTable) {
         this.diningTable = diningTable;
     }
 }

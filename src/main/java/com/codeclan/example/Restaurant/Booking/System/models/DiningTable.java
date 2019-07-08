@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="diningtables")
+@Table(name="dining_tables")
 public class DiningTable {
 
     @Id
@@ -57,7 +57,6 @@ public class DiningTable {
         this.capacity = capacity;
     }
 
-    @JsonIgnore
     public List<Booking> getBooking() {
         return bookings;
     }

@@ -68,7 +68,6 @@ public class Customer {
         this.bookingCounter = bookingCounter;
     }
 
-    @JsonIgnore
     public List<Booking> getBookings() {
         return bookings;
     }
