@@ -80,6 +80,16 @@ public class DropTableApplicationTests {
 		assertEquals("19:00", found.get(0).getTime());
 	}
 
+	@Test
+	public void canFindCustomerByTableIdAndDate(){
+		List<Customer> found = customerRepository.findByBookings_DiningTableIdAndBookings_Date(2L, "21-07-2019");
+		assertEquals("Graeme Garden", found.get(0).getName());
+	}
 
+	@Test
+	public void  canFindByBookings_DiningTableIdAndBookings_DateAndBookings_Time(){
+		List<Customer> found = customerRepository.findByBookings_DiningTableIdAndBookings_DateAndBookings_Time(2L, "12-07-2019", "17:00");
+		assertEquals("Tim Brooke-Taylor", found.get(0).getName());
+	}
 	}
 

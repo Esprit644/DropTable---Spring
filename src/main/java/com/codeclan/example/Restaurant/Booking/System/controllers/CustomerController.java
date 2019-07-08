@@ -25,4 +25,14 @@ public class CustomerController {
         return customerRepository.findByNameIgnoreCaseContaining(partialname);
     }
 
+    @GetMapping(value = "/tableId/{id}/date/{date}")
+    public List<Customer> findCustomerByTableIdAndDate(@PathVariable Long id,@PathVariable String date) {
+        return customerRepository.findByBookings_DiningTableIdAndBookings_Date(id, date);
+    }
+
+    @GetMapping(value = "/tableId/{id}/date/{date}/time/{time}")
+    public  List<Customer> findByBookings_DiningTableIdAndBookings_DateAndBookings_Time(@PathVariable Long id, @PathVariable String date,@PathVariable String time){
+        return customerRepository.findByBookings_DiningTableIdAndBookings_DateAndBookings_Time(id, date, time);
+    }
+
 }
