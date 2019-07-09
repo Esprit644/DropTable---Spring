@@ -20,6 +20,11 @@ public class CustomerController {
         return customerRepository.findCustomersByName(name);
     }
 
+    @GetMapping(value = "/nameId/{name}")
+    public List<Customer> findCustomerIdByName(@PathVariable String name) {
+        return customerRepository.findCustomerIdByName(name);
+    }
+
     @GetMapping(value = "/partialname/{partialname}")
     public List<Customer> findByNameContaining(@PathVariable String partialname){
         return customerRepository.findByNameIgnoreCaseContaining(partialname);
