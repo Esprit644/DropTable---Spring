@@ -16,8 +16,6 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //@JsonIgnoreProperties("bookings")
-    //@JsonManagedReference
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
     private List<Booking> bookings;
 
