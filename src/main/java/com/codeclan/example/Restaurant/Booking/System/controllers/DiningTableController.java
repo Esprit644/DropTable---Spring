@@ -21,8 +21,8 @@ public class DiningTableController {
     }
 
     @GetMapping(value = "bookingid/{id}")
-    public List<DiningTable> findDiningTableByBookingsId(@PathVariable Long id){
-        return diningTableRepository.findDiningTableByBookingsId(id);
+    public List<DiningTable> findDiningTableIdByBookingsId(@PathVariable Long id){
+        return diningTableRepository.findDiningTableIdByBookingsId(id);
     }
 
 }

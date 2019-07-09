@@ -11,5 +11,5 @@ public interface DiningTableRepository extends JpaRepository<DiningTable,Long> {
 
     List<DiningTable> findAllById(Long id);
 
-    List<DiningTable> findDiningTableByBookingsId(Long id);
+    List<DiningTable> findDiningTableIdByBookingsId(Long id);
 }

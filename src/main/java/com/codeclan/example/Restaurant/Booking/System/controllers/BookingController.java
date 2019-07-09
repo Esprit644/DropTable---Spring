@@ -35,6 +35,11 @@ public class BookingController {
     public List<Booking> getDateByCustomerName(@PathVariable String custName){
         return bookingRepository.findBookingDateByCustomer_Name(custName);
     }
+
+    @GetMapping(value = "tableanddate/{id}/{date}")
+    public List<Booking> findBookingsByDiningTableIdAndDate(@PathVariable Long id, @PathVariable String date){
+        return bookingRepository.findBookingsByDiningTableIdAndDate(id, date);
+    }
 }
 
 
