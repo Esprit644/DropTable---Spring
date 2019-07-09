@@ -15,8 +15,6 @@ public class DiningTable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //@JsonIgnoreProperties("bookings")
-    //@JsonManagedReference
     @OneToMany(mappedBy = "diningTable", fetch = FetchType.LAZY)
     private List<Booking> bookings;
 

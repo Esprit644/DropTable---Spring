@@ -15,12 +15,14 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @JsonIgnoreProperties("bookings")
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
+    @JsonIgnoreProperties("booking")
     @ManyToOne
-    @JoinColumn(nullable = false)
+    @JoinColumn(name = "diningTable_id", nullable = false)
     private DiningTable diningTable;
 
     private String date;
@@ -72,11 +74,9 @@ public class Booking {
         this.partySize = partySize;
     }
 
-
     public Customer getCustomer() {
         return customer;
     }
-
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
