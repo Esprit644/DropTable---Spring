@@ -58,6 +58,32 @@ public class DataLoader implements ApplicationRunner {
         Customer cust10 = new Customer("Timothy Dalton", "01315291735");
         customerRepository.save(cust10);
 
+        Customer cust11 = new Customer("Bob Dylan", "01315491735");
+        customerRepository.save(cust11);
+
+        Customer cust12 = new Customer("Bob Seger", "01315291935");
+        customerRepository.save(cust12);
+
+        Customer cust13 = new Customer("Elton John", "01311291735");
+        customerRepository.save(cust13);
+
+        Customer cust14 = new Customer("Freddie Mercury", "01317291735");
+        customerRepository.save(cust14);
+
+        Customer cust15 = new Customer("Brian May", "01215291735");
+        customerRepository.save(cust15);
+
+        Customer cust16 = new Customer("Rod Stewart", "01615291735");
+        customerRepository.save(cust16);
+
+        Customer cust17 = new Customer("James May", "01815291735");
+        customerRepository.save(cust17);
+
+
+
+
+
+
         DiningTable table1 = new DiningTable("Table1", 2);
         diningTableRepository.save(table1);
 
@@ -151,6 +177,24 @@ public class DataLoader implements ApplicationRunner {
 
         Booking booking19 = new Booking("2019-07-11", "20:00", 2, cust10, table11);
         bookingRepository.save(booking19);
+
+        Booking booking20 = new Booking("2019-07-11", "13:00", 2, cust11, table11);
+        bookingRepository.save(booking20);
+
+        Booking booking21 = new Booking("2019-07-11", "14:00", 2, cust12, table4);
+        bookingRepository.save(booking21);
+
+        Booking booking22 = new Booking("2019-07-11", "15:00", 2, cust13, table9);
+        bookingRepository.save(booking22);
+
+        Booking booking23 = new Booking("2019-07-11", "13:00", 2, cust14, table5);
+        bookingRepository.save(booking23);
+
+        Booking booking24 = new Booking("2019-07-11", "14:00", 2, cust15, table2);
+        bookingRepository.save(booking24);
+
+        Booking booking25 = new Booking("2019-07-11", "15:00", 2, cust16, table6);
+        bookingRepository.save(booking25);
     }
 
 }
