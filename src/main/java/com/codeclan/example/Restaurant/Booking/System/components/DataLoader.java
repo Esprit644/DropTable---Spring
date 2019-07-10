@@ -40,6 +40,23 @@ public class DataLoader implements ApplicationRunner {
         Customer cust4 = new Customer("Graeme Brown", "01315251735");
         customerRepository.save(cust4);
 
+        Customer cust5 = new Customer("John Cleese", "01315251734");
+        customerRepository.save(cust5);
+
+        Customer cust6 = new Customer("Tom Cruise", "01315251345");
+        customerRepository.save(cust6);
+
+        Customer cust7 = new Customer("Jack Reacher", "01315251675");
+        customerRepository.save(cust7);
+
+        Customer cust8 = new Customer("Roger Moore", "01415251735");
+        customerRepository.save(cust8);
+
+        Customer cust9 = new Customer("Sean Connery", "01315451735");
+        customerRepository.save(cust9);
+
+        Customer cust10 = new Customer("Timothy Dalton", "01315291735");
+        customerRepository.save(cust10);
 
         DiningTable table1 = new DiningTable("Table1", 2);
         diningTableRepository.save(table1);
@@ -105,7 +122,35 @@ public class DataLoader implements ApplicationRunner {
         Booking booking9 = new Booking("2019-07-25", "17:00", 2, cust2, table8);
         bookingRepository.save(booking9);
 
+        Booking booking10 = new Booking("2019-07-11", "17:00", 2, cust2, table8);
+        bookingRepository.save(booking10);
 
+        Booking booking11 = new Booking("2019-07-11", "19:00", 2, cust3, table6);
+        bookingRepository.save(booking11);
+
+        Booking booking12 = new Booking("2019-07-11", "17:00", 2, cust1, table9);
+        bookingRepository.save(booking12);
+
+        Booking booking13 = new Booking("2019-07-11", "21:00", 2, cust4, table2);
+        bookingRepository.save(booking13);
+
+        Booking booking14 = new Booking("2019-07-11", "21:00", 2, cust5, table12);
+        bookingRepository.save(booking14);
+
+        Booking booking15 = new Booking("2019-07-11", "19:00", 2, cust6, table3);
+        bookingRepository.save(booking15);
+
+        Booking booking16 = new Booking("2019-07-11", "21:00", 2, cust7, table8);
+        bookingRepository.save(booking16);
+
+        Booking booking17 = new Booking("2019-07-11", "18:00", 2, cust8, table4);
+        bookingRepository.save(booking17);
+
+        Booking booking18 = new Booking("2019-07-11", "17:00", 2, cust9, table2);
+        bookingRepository.save(booking18);
+
+        Booking booking19 = new Booking("2019-07-11", "20:00", 2, cust10, table11);
+        bookingRepository.save(booking19);
     }
 
 }

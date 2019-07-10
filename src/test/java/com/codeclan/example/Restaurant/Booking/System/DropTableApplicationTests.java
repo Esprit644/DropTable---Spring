@@ -56,7 +56,7 @@ public class DropTableApplicationTests {
 
 	@Test
 	public void canGetAllBookingsByDate(){
-		List<Booking> found = bookingRepository.getBookingsByDate("12/7/19");
+		List<Booking> found = bookingRepository.getBookingsByDate("2019-07-12");
 		assertEquals(3, found.size());
 		assertEquals(3, found.get(2).getId(), 0 );
 	}
@@ -82,13 +82,13 @@ public class DropTableApplicationTests {
 
 	@Test
 	public void canFindCustomerByTableIdAndDate(){
-		List<Customer> found = customerRepository.findByBookings_DiningTableIdAndBookings_Date(2L, "21-07-2019");
+		List<Customer> found = customerRepository.findByBookings_DiningTableIdAndBookings_Date(2L, "2019-07-21");
 		assertEquals("Graeme Garden", found.get(0).getName());
 	}
 
 	@Test
 	public void  canFindByBookings_DiningTableIdAndBookings_DateAndBookings_Time(){
-		List<Customer> found = customerRepository.findByBookings_DiningTableIdAndBookings_DateAndBookings_Time(2L, "12-07-2019", "17:00");
+		List<Customer> found = customerRepository.findByBookings_DiningTableIdAndBookings_DateAndBookings_Time(2L, "2019-07-12", "17:00");
 		assertEquals("Tim Brooke-Taylor", found.get(0).getName());
 	}
 	}
