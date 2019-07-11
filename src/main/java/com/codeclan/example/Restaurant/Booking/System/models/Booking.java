@@ -28,14 +28,16 @@ public class Booking {
     private String date;
     private String time;
     private int partySize;
+    private String customerHref;
 
 
-    public Booking(String date, String time, int partySize, Customer customer, DiningTable diningTable) {
+    public Booking(String date, String time, int partySize, Customer customer, DiningTable diningTable, String customerHref) {
         this.date = date;
         this.time = time;
         this.partySize = partySize;
         this.customer = customer;
         this.diningTable = diningTable;
+        this.customerHref = customerHref;
 
     }
 
@@ -88,6 +90,14 @@ public class Booking {
 
     public void setDiningTable(DiningTable diningTable) {
         this.diningTable = diningTable;
+    }
+
+    public String getCustomerHref() {
+        return customerHref;
+    }
+
+    public void setCustomerHref(String customerHref) {
+        this.customerHref = customerHref;
     }
 }
 

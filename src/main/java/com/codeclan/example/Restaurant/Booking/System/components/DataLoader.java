@@ -121,79 +121,79 @@ public class DataLoader implements ApplicationRunner {
         diningTableRepository.save(table12);
 
 
-        Booking booking1 = new Booking("2019-07-12", "17:00", 2, cust1, table1);
+        Booking booking1 = new Booking("2019-07-12", "17:00", 2, cust1, table1, "");
         bookingRepository.save(booking1);
 
-        Booking booking2 = new Booking("2019-07-12", "19:00", 2, cust2, table1);
+        Booking booking2 = new Booking("2019-07-12", "19:00", 2, cust2, table1, "");
         bookingRepository.save(booking2);
 
-        Booking booking3 = new Booking("2019-07-12", "19:00", 2, cust3, table3);
+        Booking booking3 = new Booking("2019-07-12", "19:00", 2, cust3, table3, "");
         bookingRepository.save(booking3);
 
-        Booking booking4 = new Booking("2019-07-21", "19:00", 2, cust3, table3);
+        Booking booking4 = new Booking("2019-07-21", "19:00", 2, cust3, table3, "");
         bookingRepository.save(booking4);
 
-        Booking booking5 = new Booking("2019-07-23", "19:00", 2, cust4, table4);
+        Booking booking5 = new Booking("2019-07-23", "19:00", 2, cust4, table4, "");
         bookingRepository.save(booking5);
 
-        Booking booking6 = new Booking("2019-07-24", "19:00", 2, cust3, table5);
+        Booking booking6 = new Booking("2019-07-24", "19:00", 2, cust3, table5, "");
         bookingRepository.save(booking6);
 
-        Booking booking7 = new Booking("2019-07-24", "21:00", 2, cust4, table6);
+        Booking booking7 = new Booking("2019-07-24", "21:00", 2, cust4, table6, "");
         bookingRepository.save(booking7);
 
-        Booking booking8 = new Booking("2019-07-25", "21:00", 2, cust1, table7);
+        Booking booking8 = new Booking("2019-07-25", "21:00", 2, cust1, table7, "");
         bookingRepository.save(booking8);
 
-        Booking booking9 = new Booking("2019-07-25", "17:00", 2, cust2, table8);
+        Booking booking9 = new Booking("2019-07-25", "17:00", 2, cust2, table8, "");
         bookingRepository.save(booking9);
 
-        Booking booking10 = new Booking("2019-07-11", "17:00", 2, cust2, table8);
+        Booking booking10 = new Booking("2019-07-11", "17:00", 2, cust2, table8, "");
         bookingRepository.save(booking10);
 
-        Booking booking11 = new Booking("2019-07-11", "19:00", 2, cust3, table6);
+        Booking booking11 = new Booking("2019-07-11", "19:00", 2, cust3, table6, "");
         bookingRepository.save(booking11);
 
-        Booking booking12 = new Booking("2019-07-11", "17:00", 2, cust1, table9);
+        Booking booking12 = new Booking("2019-07-11", "17:00", 2, cust1, table9, "");
         bookingRepository.save(booking12);
 
-        Booking booking13 = new Booking("2019-07-11", "21:00", 2, cust4, table2);
+        Booking booking13 = new Booking("2019-07-11", "21:00", 2, cust4, table2, "");
         bookingRepository.save(booking13);
 
-        Booking booking14 = new Booking("2019-07-11", "21:00", 2, cust5, table12);
+        Booking booking14 = new Booking("2019-07-11", "21:00", 2, cust5, table12, "");
         bookingRepository.save(booking14);
 
-        Booking booking15 = new Booking("2019-07-11", "19:00", 2, cust6, table3);
+        Booking booking15 = new Booking("2019-07-11", "19:00", 2, cust6, table3, "");
         bookingRepository.save(booking15);
 
-        Booking booking16 = new Booking("2019-07-11", "21:00", 2, cust7, table8);
+        Booking booking16 = new Booking("2019-07-11", "21:00", 2, cust7, table8, "");
         bookingRepository.save(booking16);
 
-        Booking booking17 = new Booking("2019-07-11", "18:00", 2, cust8, table4);
+        Booking booking17 = new Booking("2019-07-11", "18:00", 2, cust8, table4, "");
         bookingRepository.save(booking17);
 
-        Booking booking18 = new Booking("2019-07-11", "17:00", 2, cust9, table2);
+        Booking booking18 = new Booking("2019-07-11", "17:00", 2, cust9, table2, "");
         bookingRepository.save(booking18);
 
-        Booking booking19 = new Booking("2019-07-11", "20:00", 2, cust10, table11);
+        Booking booking19 = new Booking("2019-07-11", "20:00", 2, cust10, table11, "");
         bookingRepository.save(booking19);
 
-        Booking booking20 = new Booking("2019-07-11", "13:00", 2, cust11, table11);
+        Booking booking20 = new Booking("2019-07-11", "13:00", 2, cust11, table11, "");
         bookingRepository.save(booking20);
 
-        Booking booking21 = new Booking("2019-07-11", "14:00", 2, cust12, table4);
+        Booking booking21 = new Booking("2019-07-11", "14:00", 2, cust12, table4, "");
         bookingRepository.save(booking21);
 
-        Booking booking22 = new Booking("2019-07-11", "15:00", 2, cust13, table9);
+        Booking booking22 = new Booking("2019-07-11", "15:00", 2, cust13, table9, "");
         bookingRepository.save(booking22);
 
-        Booking booking23 = new Booking("2019-07-11", "13:00", 2, cust14, table5);
+        Booking booking23 = new Booking("2019-07-11", "13:00", 2, cust14, table5, "");
         bookingRepository.save(booking23);
 
-        Booking booking24 = new Booking("2019-07-11", "14:00", 2, cust15, table2);
+        Booking booking24 = new Booking("2019-07-11", "14:00", 2, cust15, table2, "");
         bookingRepository.save(booking24);
 
-        Booking booking25 = new Booking("2019-07-11", "15:00", 2, cust16, table6);
+        Booking booking25 = new Booking("2019-07-11", "15:00", 2, cust16, table6, "");
         bookingRepository.save(booking25);
     }
 

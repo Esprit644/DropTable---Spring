@@ -16,7 +16,7 @@ public class BookingTest {
     public void before(){
         table1 = new DiningTable("table1", 6);
         customer1 = new Customer("Mr Blobby", "07888 888 888");
-        booking1 = new Booking("12/7/19", "19:00", 4, customer1, table1);
+        booking1 = new Booking("12/7/19", "19:00", 4, customer1, table1, "");
     }
 
     @Test
